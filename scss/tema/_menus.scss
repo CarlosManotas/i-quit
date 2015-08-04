@@ -1,0 +1,87 @@
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+	-moz-appearance:textfield;
+	background-image: url('../img/icon_telefono.png');
+	background-repeat: no-repeat;
+	background-position: 98%;
+}
+input[type=name]{
+
+	background-image: url('../img/icon_nombre.png');
+	background-repeat: no-repeat;
+	background-position: 98%;
+}
+input[type=email]{
+
+	background-image: url('../img/icon_email.png');
+	background-repeat: no-repeat;
+	background-position: 98%;
+}
+.container--formulario{
+	width:100%;
+	position:relative;
+
+	h2{
+		text-align:center;
+		line-height: 1.2;
+	}
+	span{
+		font-size: 1.5em;
+	}
+
+	@include desde(web) {
+		position:absolute;
+		top:0;
+		bottom:0;
+		margin:auto 0;	
+		width: 300px;
+		right:-1000%;
+		z-index: 2000;
+	}
+}
+.container--formulario__box{
+	width:100%;
+}
+.container--formulario__box--flex{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	background: #bad801;
+	min-height:400px;
+
+	input{
+		width: 80%;
+		margin-bottom: .5em;
+		border-radius: 5px;
+		border:none;
+		padding: .3em;
+
+	}
+	button{
+		background:#262b2e;
+		border:none;
+		color:white;
+		width: 50%;
+		border-radius: 5px;
+		margin: .5em 0 1em 0;
+		padding:.5em;
+		font-size: 1.2em;
+	}
+	button:hover{
+		background:red;
+	}
+	h2{
+		border-top: 2px solid black;
+		padding: .5em 0;
+		text-align: center;
+		border-bottom: 2px solid black;
+		line-height: 1.2;
+		font-size: 2em;
+	}
+}

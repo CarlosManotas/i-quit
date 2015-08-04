@@ -1,0 +1,410 @@
+
+
+
+/*
+*
+*
+*
+*
+*					PASOS
+*
+*
+*
+*
+*/
+
+.container--pasos{
+	background:#39b9eb;
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items:center;
+	color:white;
+	padding:1.5em;
+	width:100%;
+
+	h2{
+		margin-top: 0;
+		color:white;
+		text-align: center;
+	}
+	h5{
+		text-align: center;
+		color:white;
+	}
+	p{
+		text-align: center;
+	}
+	
+	
+	&--flex{
+		
+		display: flex;
+		flex-flow: column nowrap;
+		width: 100%;
+
+
+		&__1,
+		&__2,
+		&__3{
+
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			padding: 2em 0;
+			
+			h2{
+				background:white;
+				border-radius: 50%;
+				color:#39b9eb;
+				padding:.7em;
+				width: 70px;
+				height: 70px;
+			}
+
+		}
+
+		@include desde(tablet) {
+			flex-flow:row nowrap;
+
+
+			&__1,
+			&__2,
+			&__3{
+				width: 33.3333333333%;
+				
+				h5{
+					width: 90%;
+					font-size: .8em;
+				}
+			}
+		}
+
+	}
+
+}
+
+/*
+*
+*
+*
+*
+*					FIN DE PASOS
+*
+*
+*
+*
+*/
+
+/*
+*
+*
+*
+*
+*					INFO
+*
+*
+*
+*
+*/
+
+
+.container--info{
+	display:flex;
+	width:100%;
+	justify-content:center;
+	flex-flow:column nowrap;
+	align-items: center;
+	padding:1em;
+
+	&__nicotina{
+		padding: 1.5em 0;
+		h2{
+			color:#bad801;
+			text-align: center;
+			font-size: 1.5em;
+		}
+	}
+
+	@include desde(tablet) {
+
+		flex-flow: row nowrap;
+
+		&__nicotina,
+		&__figure{
+			width: 45%;
+			margin: 1.5em;
+
+			h2{
+				text-align: left;
+			}
+		}
+	}
+}
+
+/*
+*
+*
+*
+*
+*					FIN DE INFO
+*
+*
+*
+*
+*/
+
+/*
+*
+*
+*
+*
+*					PROCESOS
+*
+*
+*
+*
+*/
+
+.container--procesos{
+	width:100%;
+	display:flex;
+	flex-flow: column nowrap;
+	justify-content:center;
+	background: #39b9eb;
+	color:white;
+	padding:1em 0;
+	align-items:center;
+
+	h5{
+		color:#bad801;
+		text-align: center;
+	}
+
+	&__uno,
+	&__dos,
+	&__tres{
+		margin: 1em 0;
+		width: 90%;
+		align-self:center;
+		font-size: .9em;
+	}
+
+	@include desde(tablet) {
+		flex-flow: row nowrap;
+		align-items:flex-start;
+
+		&__uno,
+		&__dos,
+		&__tres{
+			width: 33.333%;
+			align-self:baseline;
+			padding: 0 1em;
+
+			h5{
+				font-size: .74em;
+			}
+		}
+	}
+}
+
+/*
+*
+*
+*
+*
+*					FIN DE PROCESOS
+*
+*
+*
+*
+*/
+
+/*
+*
+*
+*
+*
+*					PRODUCTO
+*
+*
+*
+*
+*/
+.container--producto{
+	display:flex;	
+	justify-content:center;
+	align-items:center;
+	flex-flow: row wrap;
+	width:100%;
+
+	&__1,
+	&__2,
+	&__3{
+		width: 100%;
+	}
+
+	&__2{
+
+		padding:1em;
+
+		button{
+
+			background: #66cc34;
+			color: white;
+			border:none;
+			border-radius: 8px;
+			padding: .4em .4em;
+			font-weight: 600;
+			font-size: 1.2em;
+
+			&:hover{
+				background:red;
+			}
+		}
+	}
+	
+	&__3{
+		text-align: center;
+
+		&__1{
+			margin-top: 4em;
+		}
+	}
+
+	
+	@include desde(tablet) {
+
+		&__1,
+		&__2{
+			width: 50%;
+		}
+		&__3{
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items:baseline;
+
+			&__1,
+			&__2,
+			&__3{
+				width: 33.33333333333%;
+				padding:1em;
+			}
+		}
+	}
+
+}
+/*
+*
+*
+*
+*
+*			FIN DE	PRODUCTO
+*
+*
+*
+*
+*/
+
+
+
+
+
+/*
+*
+*
+*
+*
+*					TESTIMONIOS
+*
+*
+*
+*
+*/
+.container--testimonios{
+	width:100;
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	background: #39b9eb;
+	color:white;
+	background-image: url(../img/comilla.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position:50%;
+	padding-bottom:1.5em;
+
+	&__1,
+	&__2{
+		padding:0 2em ;
+	}
+
+	&__1--img{
+	  margin: 2em auto;
+	  width: 200px;
+	  height: 200px;
+	  background-repeat: no-repeat;
+	  border-radius: 50%;
+	  border: 2px solid #c6c4c4; 
+	  background-size: 100% auto;
+	  background-position: 50% 0%;
+	  background-image: url(../img/testimonio1.jpg);
+		
+	}
+
+	&__2--img{
+	    margin: 2em auto;
+	    width: 200px;
+	    height: 200px;
+	    background-repeat: no-repeat;
+	    border-radius: 50%;
+	    border: 2px solid #c6c4c4; 
+	    background-size: auto 160%;
+	  	background-position: 50% 10%;
+		background-image: url(../img/testimonio2.jpg);
+	}
+
+
+	@include desde(tablet) {
+
+		align-items: baseline;
+
+		&__1,
+		&__2{
+			width: 50% ;
+		}
+
+		&__2--img,
+		&__1--img{
+			width: 150px;
+			height: 150px;
+
+		}
+	}
+	@include desde(web){
+		background-position: 0;
+	}
+}
+/*
+*
+*
+*
+*
+*					FOOTER
+*
+*
+*
+*
+*/
+.footer{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow:column nowrap;
+	width:100%;
+	text-align:center;
+	background:#bad801;
+	padding:2em;
+}
