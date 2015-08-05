@@ -16,7 +16,7 @@ $(function(){
 		de.animate({left:"1em"}, 1300);
 		fumar.animate({left:"1.5em"}, 1500);
 	}
-	if (viewPort >= 960 && viewPort <= 1400){
+	if (viewPort > 768 && viewPort <= 1400){
 		deja.animate({left:"5.5em"}, 1000);
 		de.animate({left:"2em"}, 1300);
 		de.animate({left:"0"}, 1500);
@@ -40,4 +40,18 @@ $(function(){
 
 		$("body,html").animate({scrollTop:0}, 1000 );
 	});
+
+
+	$(window).on("scroll", function(){
+		var pantalla = $(window).scrollTop();
+		if ( pantalla >= 1300 ){
+
+				$(".imagen1").animate({left:"0"} , 1000);
+				$(".imagen2").animate({left:"0"} , 1500);
+			}
+	})
+
+	
+
+	
 });

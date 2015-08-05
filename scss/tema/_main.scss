@@ -14,7 +14,8 @@
 */
 
 .container--pasos{
-	background:#39b9eb;
+	background: url(../img/photo.png);
+	background-color:#39b9eb;
 	display:flex;
 	flex-flow:column nowrap;
 	justify-content:center;
@@ -77,6 +78,7 @@
 					width: 90%;
 					font-size: .8em;
 				}
+
 			}
 		}
 
@@ -117,23 +119,27 @@
 	align-items: center;
 	padding:1em;
 
+
 	&__nicotina{
-		padding: 1.5em 0;
 		h2{
 			color:#bad801;
 			text-align: center;
 			font-size: 1.5em;
+			margin: 0 0 .5em 0;
 		}
 	}
 
 	@include desde(tablet) {
 
 		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items:flex-start;
+		padding:0;
+		margin: 4em 0;
 
 		&__nicotina,
 		&__figure{
 			width: 45%;
-			margin: 1.5em;
 
 			h2{
 				text-align: left;
@@ -153,6 +159,50 @@
 *
 *
 */
+/*
+*
+*
+*
+*
+*					CUERPO HUMANO
+*
+*
+*
+*
+*/
+.container--cuerpoHumano{
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	position:relative;
+
+
+	.container-imagen{
+		position:relative;
+		max-height: 580px;
+		overflow: hidden;
+
+		.imagen1{
+			position:relative;
+			right: 0;
+			left: 5000px;
+			margin:0 auto;
+		}
+		.imagen2{
+			position:absolute;
+			right: 0;
+			left: -5000px;
+			margin: 0 auto;
+			top:0;
+		}
+	}
+}
+
+
+
+
 
 /*
 *
@@ -171,12 +221,12 @@
 	display:flex;
 	flex-flow: column nowrap;
 	justify-content:center;
-	background: #39b9eb;
+	background: url(../img/photo.png);
 	color:white;
 	padding:1em 0;
 	align-items:center;
 
-	h5{
+	h3{
 		color:#bad801;
 		text-align: center;
 	}
@@ -200,10 +250,6 @@
 			width: 33.333%;
 			align-self:baseline;
 			padding: 0 1em;
-
-			h5{
-				font-size: .74em;
-			}
 		}
 	}
 }
@@ -237,6 +283,7 @@
 	align-items:center;
 	flex-flow: row wrap;
 	width:100%;
+	background:white;
 
 	&__1,
 	&__2,
@@ -259,7 +306,7 @@
 			font-size: 1.2em;
 
 			&:hover{
-				background:red;
+				background:darken(green,5%);
 			}
 		}
 	}
@@ -267,17 +314,42 @@
 	&__3{
 		text-align: center;
 
+		
+
+		h5{
+			background:#cdcccc;
+			padding: 2em 0;
+			position:relative;
+		}
+
 		&__1{
 			margin-top: 4em;
+		}
+		&__3{
+			h5{
+				background:green;
+				color:white;
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	
 	@include desde(tablet) {
+		padding-top: 2em;
 
 		&__1,
 		&__2{
 			width: 50%;
+		}
+		&__1{
+			img{
+				float:right;
+			}
+		}
+		&__2{
+			align-self:flex-start;
+			padding-right: 8em;
 		}
 		&__3{
 			display: flex;
@@ -285,11 +357,36 @@
 			justify-content: center;
 			align-items:baseline;
 
+			.etiqueta{
+				border: 41px solid transparent;
+				width: 0;
+				height: 0;
+				border-left-color: white;
+				position:relative;
+				top:-6.4em;
+			}
+			.etiqueta-front{
+				border: 41px solid;
+				width: 0;
+				height: 0;
+				border-color: white transparent white transparent;
+				position: relative;
+				top: -11.5em;
+				left:20.5em;
+			}
+
 			&__1,
 			&__2,
 			&__3{
 				width: 33.33333333333%;
 				padding:1em;
+				margin-top: 0;
+				max-height: 420px;
+			}
+			&__3{
+				h5{
+					margin-bottom: 1.7em;
+				}
 			}
 		}
 	}
@@ -328,17 +425,22 @@
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	background: #39b9eb;
+	background: url(../img/photo.png);
 	color:white;
-	background-image: url(../img/comilla.png);
-	background-size:contain;
-	background-repeat: no-repeat;
-	background-position:50%;
-	padding-bottom:1.5em;
+	padding:1.5em;
 
 	&__1,
 	&__2{
 		padding:0 2em ;
+		background-size:15%;
+		background-repeat: no-repeat;
+	}
+	&__1{
+		background-image: url(../img/comillaUp.png);
+	}
+	&__2{
+		background-image: url(../img/comillaDown.png);
+		background-position: 100% 100%;
 	}
 
 	&__1--img{
@@ -398,13 +500,43 @@
 *
 *
 */
+footer{
+	width:100%;
+	background:#242c2e;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow:column nowrap;
+}
 .footer{
 	display:flex;
 	justify-content:center;
 	align-items:center;
 	flex-flow:column nowrap;
 	width:100%;
-	text-align:center;
-	background:#bad801;
+	text-align:left;
 	padding:2em;
+
+	p{
+		width: 100%;
+		color: white;
+
+	}
+	img{
+		max-width: 60%;
+	}
+	@include desde(tablet) {
+		flex-flow: row nowrap;
+		max-width: 1200px;
+
+		p{
+			width: 85%;
+			text-align: left;
+			padding-right:7em;
+		}
+		img{
+			width: 15%;
+			padding:1em;
+		}
+	}
 }
